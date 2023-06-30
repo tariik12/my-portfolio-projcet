@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ul li a {
+  @apply text-base font-normal bg-none hover:bg-none hover:shadow-none;
+}
+ul li  {
+  @apply text-base font-normal bg-none hover:bg-none hover:shadow-none;
+}
+
+li a :active {
+  @apply font-bold m-3 text-xl hover:text-cyan-600;
+}

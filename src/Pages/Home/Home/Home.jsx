@@ -13,7 +13,7 @@ import Review from "../Review/Review";
 
 const Home = () => {
     return (
-        <div>
+        <div id="home">
             <TextHeader></TextHeader>
             <Banner></Banner>
             <Skill></Skill>
