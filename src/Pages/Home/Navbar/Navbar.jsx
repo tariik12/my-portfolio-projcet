@@ -1,3 +1,4 @@
+
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
@@ -5,7 +6,11 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
 
+
+    
+
   const navMenu = <>
+
     <li>
       <Link to='home' smooth={true}  >
         Home
@@ -39,7 +44,7 @@ const Navbar = () => {
               {navMenu}
             </ul>
           </div>
-          <NavLink className=" uppercase text-xl">Tariik12</NavLink>
+          <NavLink className=" uppercase text-2xl font-bold italic">Ta<span className="text-cyan-500 text">ri</span>k</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
