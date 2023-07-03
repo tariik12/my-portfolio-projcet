@@ -1,41 +1,38 @@
+// import Header from "../../../Component/Header";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
-const Education = () => {
+const Education = ({image}) => {
+  const {image1,image2,image3} = image
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    
+  };
     return (
         <div id="education">
-            <h1>Education</h1>
-            <div className="grid grid-col-1 grid-cols-3">
-            <div className="card w-96 bg-neutral text-neutral-content">
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">Cookies!</h2>
-    <p>We are using cookies for no reason.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Accept</button>
-      <button className="btn btn-ghost">Deny</button>
-    </div>
-  </div>
-</div>
-            <div className="card w-96 bg-neutral text-neutral-content">
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">Cookies!</h2>
-    <p>We are using cookies for no reason.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Accept</button>
-      <button className="btn btn-ghost">Deny</button>
-    </div>
-  </div>
-</div>
-            <div className="card w-96 bg-neutral text-neutral-content">
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">Cookies!</h2>
-    <p>We are using cookies for no reason.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Accept</button>
-      <button className="btn btn-ghost">Deny</button>
-    </div>
-  </div>
-</div>
-            </div>
+          {/* TODO */}
+            {/* <Header title={'Education'}/> */}
+            <div>
+        <Slider {...settings} className="bg-black text-white text-4xl">
+          <div >
+            <img src={image1} alt="" />
+          </div>
+          <div >
+          <img src={image2} alt="" />
+          </div>
+          <div >
+          <img src={image3} alt="" />
+          </div>
+         
+        </Slider>
+      </div>
+
         </div>
     );
 };

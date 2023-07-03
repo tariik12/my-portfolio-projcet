@@ -1,0 +1,44 @@
+[
+    {   "id":"abc1",
+        "projectName": "Summer Language Camp",
+        "image1": "https://i.ibb.co/8rC3Kbb/Screenshot-515.png",
+        "image2": "https://i.ibb.co/yskkgYJ/Screenshot-516.png",
+        "image3": "https://i.ibb.co/t3rS72R/Screenshot-517.png",
+        "description":["The home page Shows an interesting Popular Classes section. Which shows the top 6 popular classes.","Implement a Dashboard private route. The dashboard is different for admin, instructor, and student. ","Implement payment method for student enrollment and can see payment history enrolled classes. "],
+        "clientLink":"https://github.com/tariik12/summer-camp-client",
+        "liveLink":"https://summer-language-cam.web.app/",
+        "serverLink":"https://github.com/tariik12/summer-camp-server",
+        "tec":["React.js "," React Router "," React Awesome Components "," Tailwind CSS "," Daisyui "," Firebase Authentication "," MongoDB "," Express.js "," React Hook Form "," React Tap "," AOS "," Axios "," Tanstack react query "," Animation Reve l Ract Toastify."],
+        "duration":"( Duration: 10 Days)"
+
+        
+        },
+    {   "id":"abc2",
+        "projectName": "Sand Pal",
+        "image1": "https://i.ibb.co/hYNpKZR/Screenshot-518.png",
+        "image2": "https://i.ibb.co/sQYgXSR/Screenshot-519.png",
+        "image3": "https://i.ibb.co/7WszWS6/Screenshot-520.png",
+        "description":["The home page interesting section is the 'sand pal toy '  this section implements React Tap.","Every user can Toys add, Update, Delete, and Toys View Details. This Toys Show is a table format.","Implement a search system, ascending, and descending on my Toys page."],
+        "clientLink":"https://github.com/tariik12/sand-pal-client",
+        "liveLink":"https://spk-project-client-side.web.app/",
+        "serverLink":"https://github.com/tariik12/sand-pal-server",
+        "tec":["React.js "," React Router "," React Awesome"," Tailwind CSS "," Daisyui "," Firebase "," MongoDB "," Express.js "," React Hook Form "," React Tap "," AOS "],
+        "duration":"( Duration: 7 Days)"
+
+        
+        },
+    {   "id":"abc3",
+        "projectName": "Food Forever",
+        "image1": "https://i.ibb.co/1G1jb7J/Screenshot-521.png",
+        "image2": "https://i.ibb.co/P1THh2p/Screenshot-522.png",
+        "image3": "https://i.ibb.co/Y8wBYS2/Screenshot-523.png",
+        "description":["Home Page add Cheep Recipe and view details, Private Route Button","Implement Authentication System and Only Login Person can Watch and View Details.","Implemnt an interesting animation banner section and dark and light them."],
+        "clientLink":"https://github.com/tariik12/food-forever-client",
+        "liveLink":"https://italian-recipe-assignment10.web.app/",
+        "serverLink":"https://github.com/tariik12/food-forever-server-site",
+        "tec":["React.js","React Router","React Awesome","Tailwind CSS","Firebase Authentication","MongoDB Express.js","React Marque","Lottie Animation "],
+        "duration":"( Duration: 5 Days)"
+
+        
+        }
+]

@@ -1,209 +1,92 @@
-import { Chart } from "react-google-charts";
+import  { useRef } from "react";
+import PropTypes from "prop-types";
+import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
+import { wrap } from "@motionone/utils";
+import { Typewriter } from "react-simple-typewriter";
 
-  export const options = {
-    title: "My Daily Activities",
-    animation: {
-        duration: 1000,
-        easing: "out",
-        startup: true,
-      },
-  }
+const ParallaxText = ({ children, baseVelocity = 100 }) => {
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(10, -1, v)}%`);
+
+  const directionFactor = useRef(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 500);
+
+    /**
+     * This is what changes the direction of the scroll once we
+     * switch scrolling directions.
+     */
+    if (velocityFactor.get() < 0) { 
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  return (
+    <div className="parallax">
+      <motion.div className="scroller" style={{ x }}>
+        <span>{children} </span>
+        
+      </motion.div>
+    </div>
+  );
+};
+
+ParallaxText.propTypes = {
+  children: PropTypes.string.isRequired,
+  baseVelocity: PropTypes.number.isRequired
+};
 
 const Skill = () => {
-    const data = [
-        ["Front End Developer", "per hour"],
-        ["Full Stack Developer", 11],
-        ["React Developer", 2],
-        ["MERN Stack Developer", 2],
-        ["JavaScript Developer", 2],
-        ["Backend Developer", 7],
-        ["Developer", 7],
-      ];
-      
-      
-    return (
-        <div id="skill" className="bg-purple-500 grid grid-col-1 md:grid-cols-2">
-           <div>
-           <h1 className="text-center mt-5 p-5">
-            Developer</h1>
-
-
-            <Chart
-      data={data}
-      chartType="PieChart"
-      options={options}
-      width={"100%"}
-      height={"400px"}
-    />
-
-           </div>
-           <div>
-           <h1 className="text-center mt-5 p-5">skill</h1>
-           <div className="overflow-x-auto h-96">
-  <table className="table table-pin-rows">
-  <thead>
-    <tr>
-      <th>A</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Ant-Man</td></tr>
-    <tr><td>Aquaman</td></tr>
-    <tr><td>Asterix</td></tr>
-    <tr><td>The Atom</td></tr>
-    <tr><td>The Avengers</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>B</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Batgirl</td></tr>
-    <tr><td>Batman</td></tr>
-    <tr><td>Batwoman</td></tr>
-    <tr><td>Black Canary</td></tr>
-    <tr><td>Black Panther</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>C</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Captain America</td></tr>
-    <tr><td>Captain Marvel</td></tr>
-    <tr><td>Catwoman</td></tr>
-    <tr><td>Conan the Barbarian</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>D</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Daredevil</td></tr>
-    <tr><td>The Defenders</td></tr>
-    <tr><td>Doc Savage</td></tr>
-    <tr><td>Doctor Strange</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>E</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Elektra</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>F</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Fantastic Four</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>G</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Ghost Rider</td></tr>
-    <tr><td>Green Arrow</td></tr>
-    <tr><td>Green Lantern</td></tr>
-    <tr><td>Guardians of the Galaxy</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>H</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Hawkeye</td></tr>
-    <tr><td>Hellboy</td></tr>
-    <tr><td>Incredible Hulk</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>I</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Iron Fist</td></tr>
-    <tr><td>Iron Man</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>M</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Marvelman</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>R</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Robin</td></tr>
-    <tr><td>The Rocketeer</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>The Shadow</td></tr>
-    <tr><td>Spider-Man</td></tr>
-    <tr><td>Sub-Mariner</td></tr>
-    <tr><td>Supergirl</td></tr>
-    <tr><td>Superman</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>T</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Teenage Mutant Ninja Turtles</td></tr>
-    <tr><td>Thor</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>W</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>The Wasp</td></tr>
-    <tr><td>Watchmen</td></tr>
-    <tr><td>Wolverine</td></tr>
-    <tr><td>Wonder Woman</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>X</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>X-Men</td></tr>
-  </tbody>
-  <thead>
-    <tr>
-      <th>Z</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Zatanna</td></tr>
-    <tr><td>Zatara</td></tr>
-  </tbody>
-  </table>
-</div>
-           </div>
-           </div>
-    );
+  return (
+    <div id="skill" className="">
+      <div className="p-5 flex flex-col mx-auto">
+        <h1 className="text-3xl font-thin italic mx-auto">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-xl mb-10">
+            <Typewriter
+              words={["Expertise"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </span>
+        </h1>
+        <div className="border">
+          <>
+            <ParallaxText baseVelocity={-5}> 
+            <button className="btn">MotionFramer Motion</button>
+            <button className="btn">MotionFramer Motion</button>
+            </ParallaxText>
+            <ParallaxText baseVelocity={5}>  Motion</ParallaxText>
+            <ParallaxText baseVelocity={-5}> MotionFramer MotionFramer Motion</ParallaxText>
+            <ParallaxText baseVelocity={5}> MotionFramer MotionFramer Motion</ParallaxText>
+          </>
+        </div>
+      </div>
+      <div>
+        <h1 className="text-center mt-5 p-5">skill</h1>
+        <div className="overflow-x-auto h-96"></div>
+      </div>
+    </div>
+  );
 };
 
 export default Skill;

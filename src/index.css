@@ -2,14 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.outline-title {
+  color: rgba(7, 1, 1, 0);
+  -webkit-text-stroke: 2px black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+}
+.outline-title-dark {
+  color: black;
+  -webkit-text-stroke: 2px whitesmoke;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+}
+
+
 li a {
   @apply font-bold text-lg
 }
 
 li a :active {
-  @apply font-extrabold  text-xl hover:text-cyan-600;
+  @apply font-extrabold  text-xl bg-gradient-to-r from-cyan-500 to-indigo-400;
 }
 
 .text-cyan-500 {
   
-  color: #1e9db3}
+  color: }
