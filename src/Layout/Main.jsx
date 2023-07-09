@@ -24,15 +24,15 @@ const Main = () => {
   return (
     <ThemContext.Provider value={dark}>
       {dark ? (
-        <Particles init={particlesInit} options={psParticles} />
-      ) : (
         <Particles init={particlesInit} options={psParticles1} />
+        ) : (
+          <Particles init={particlesInit} options={psParticles} />
       )}
 
 
       <Navbar />
       <div>
-      <p  className=' ms-[150px] w-5  -mt-6 md:me-20 md:-mt-14 ' onClick={toggleDarkMode}><MdOutlineDarkMode className={dark? 'text-white':'text-black'} style={{fontSize:'40px'}}/></p>
+      <p  className=' ms-[200px] w-5 -mt-[50px]   md:-mt-14 ' onClick={toggleDarkMode}><MdOutlineDarkMode className={dark? 'text-black':'text-white'} style={{fontSize:'40px'}}/></p>
       </div>
       <Outlet />
       <Footer />

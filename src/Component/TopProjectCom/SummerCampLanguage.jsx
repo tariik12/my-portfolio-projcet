@@ -17,7 +17,7 @@ setHandle(true)
     console.log(summer)
     // sum.projectName 
     return (
-        <>
+        <div className="md:w-full w-[270px] mx-auto">
         <Canvas className="">
             <Stage environment="city" intensity={1}>
 
@@ -28,10 +28,10 @@ setHandle(true)
         <Link ><div className=" flex justify-center  ">
                     {/* TODO */}
                     
-                   <button onClick={handleProject}  className="btn btn-lg text-4xl w-full  bg-gradient-to-t from-cyan-500  to-indigo-400">Explore More</button>
-                   {handle&& <ProjectDetails pro={summer}/>}
+                   <button onClick={handleProject}  className="btn btn-xs md:btn-md md:text-2xl w-full md:w-1/2  bg-gradient-to-t from-cyan-500  to-indigo-400">Explore More</button>
+                   {handle? <ProjectDetails pro={summer}/>: ""}
                    </div></Link>
-        </>
+        </div>
        
         
     );

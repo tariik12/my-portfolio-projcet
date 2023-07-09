@@ -8,7 +8,7 @@ const ProjectDetails = ({pro}) => {
     const {projectName,image1,image2,image3,clientLink,liveLink,serverLink,tec,description} = pro;
     const image = {image1,image2,image3}
     return (
-        <div className="h-[500px]  z-50 w-[400px] md:w-[600px] top-0 p-10 overflow-scroll text-white bg-black absolute">
+        <div className="h-[500px]  z-50  top-0 p-10 overflow-scroll text-white bg-black absolute" style={{ width: '50vw', height: '50vh', top: 0, right: 0}}>
                <div className="">
                <Education image={image}/>
                </div>

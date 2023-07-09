@@ -8,7 +8,7 @@ import HeaderBanner from "../../../Component/TopProjectCom/HeaderBanner";
 
 const TextHeader = () => {
     return (
-        <div className='relative mb-40'> 
+        <div className='relative mb-40 '> 
             <div className="w-full h-[400px] animate-pulse">
             <HeaderBanner/>
             </div>
@@ -23,8 +23,8 @@ const TextHeader = () => {
             </Canvas>
             </div> */}
 
-              <div className=' absolute  md:ms-[300px] top-[360px] z-40 '>
-              <h1 className='text-6xl font-thin italic   mx-auto' >
+              <div className='   absolute  md:ms-[300px] top-[310px]  md:top-[360px] z-40 '>
+              <h1 className='md:text-6xl ps-3 text-xl md:font-thin italic font-bold  ' >
               
                             <span className='text-transparent bg-clip-text  bg-gradient-to-r from-cyan-500 
                                   to-indigo-400  rounded-xl mb-10'>

@@ -16,21 +16,21 @@ const SandPalToy = ({project}) => {
         const sand = project.find(sum =>sum.projectName === 'Sand Pal')
         console.log(sand)
     return (
-        <>
+        <div className="md:w-full w-[270px] mx-auto">
         <Canvas className="">
-            <Stage environment="city" intensity={1}>
+            <Stage environmfent="city" intensity={1}>
 
             <Chir/>
             </Stage>
             <OrbitControls enableZoom={false}/>
         </Canvas>
-        <Link ><div className=" flex justify-center  ">
+        <Link className="mx-auto" ><div className=" flex justify-center  ">
                     {/* TODO */}
                     
-                   <button onClick={handleProject}  className="btn btn-lg text-4xl w-full  bg-gradient-to-t from-cyan-500  to-indigo-400">Explore More</button>
+                   <button onClick={handleProject}  className="btn btn-xs md:btn-md md:text-2xl w-full md:w-1/2  bg-gradient-to-t from-cyan-500  to-indigo-400">Explore More</button>
                    {handle&& <ProjectDetails pro={sand}/>}
                    </div></Link>
-        </>
+        </div>
     );
 };
 

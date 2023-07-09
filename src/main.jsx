@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   
-  <div className='max-w-screen-xl mx-auto '>
+  <div className='max-w-screen-xl   mx-auto'>
     
      <RouterProvider router={router} />
      <ToastContainer />
