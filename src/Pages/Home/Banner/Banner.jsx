@@ -45,7 +45,7 @@ const Banner = () => {
             </div>
 
             <div className=" relative hover:opacity-40" >
-                <img className="w-[220px] animate-pulse  z-50 absolute md:ms-52 mt-10 ms-[70px] h-[270px] nx-auto " src="https://i.ibb.co/BwLqTJK/DSC-0028-2-01-2-jpeg-removebg-preview.png" alt="" />
+                <img className="w-[220px] animate-pulse  z-50 absolute md:ms-52 mt-10 ms-[70px]  nx-auto " src="https://i.ibb.co/5cWVgdQ/IMG-20230721-183222-01-removebg-preview-3-removebg-preview-1-removebg-preview.pnghttps://i.ibb.co/D4MGHpX/IMG-20230721-183222-01-removebg-preview-4-removebg-preview-1.png" alt="" />
                 <div className=" h-[400px]  mx-auto md:w-full">
                     <Canvas className=" animate-pulse" >
                         <OrbitControls enableZoom={false} />

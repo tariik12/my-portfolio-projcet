@@ -7,6 +7,7 @@ const ProjectDetails = ({pro}) => {
     console.log(pro)
     const {projectName,image1,image2,image3,clientLink,liveLink,serverLink,tec,description} = pro;
     const image = {image1,image2,image3}
+    console.log(clientLink,liveLink,serverLink)
     return (
         <div className="h-[500px]  z-50  top-0 p-10 overflow-scroll text-white bg-black absolute" style={{ width: '50vw', height: '50vh', top: 0, right: 0}}>
                <div className="">
@@ -14,8 +15,16 @@ const ProjectDetails = ({pro}) => {
                </div>
            
          <div className="mt-5 md:w-9/12 md:mx-auto ">
-         <Link to={clientLink} className="btn btn-sm md:btn-md  text-xl me-2 bg-gradient-to-t from-cyan-500  to-indigo-400"><button >Client Git</button></Link>
-          <Link to={liveLink} className="btn btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500  to-indigo-400"><button>LiveLink</button></Link>
+         <Link to={clientLink} className="btn btn-sm md:btn-md mb-3 text-xl me-2 bg-gradient-to-t from-cyan-500  to-indigo-400"><button >Client Git</button></Link>
+          <Link to='https://github.com/tariik12' className="btn btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500 me-2 mb-3 to-indigo-400"><button>LiveLink</button></Link>
+          {/* <a
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn"
+                href={liveLink}
+              >
+                Live Website Link
+              </a> */}
           <Link to={serverLink} className="btn  btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500  to-indigo-400"><button><button>server Git</button></button></Link>
          </div>
          <SubHeader title={projectName}/>
