@@ -1,6 +1,6 @@
 import {  OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Header1 from '../../Component/Header1'
+import Header1 from './Header1'
 
 
 const HeaderBanner = () => {

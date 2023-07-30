@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import Marquee from "react-fast-marquee";
+
 import { Link } from "react-router-dom";
-import Header from "../../../Component/Header";
+import Marquee from "react-fast-marquee";
 
 
-const Project = () => {
-
+const AllProject = () => {
     const [projects,setProject] = useState([])
     console.log(projects)
         useEffect(() =>{
@@ -14,8 +13,8 @@ const Project = () => {
             .then(data =>setProject(data))
         },[])
     return (
-       <div id="project">
-        <Header   title={'Projects'}/>
+        <div >
+       
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
         {
             projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
@@ -35,11 +34,9 @@ const Project = () => {
         }
             
         </div>
-<div className="text-center">
-<Link to='/allProject' className=" mt-5  border-spacing-3 btn bg-cyan-800">Show All project </Link>
-</div>
+
        </div>
     );
 };
 
-export default Project;
+export default AllProject;

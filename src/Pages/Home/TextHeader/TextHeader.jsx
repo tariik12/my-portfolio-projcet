@@ -4,7 +4,7 @@
 // import { Canvas } from "@react-three/fiber";
 // import Cube from "../../../Cube";
 import { Typewriter } from 'react-simple-typewriter'
-import HeaderBanner from "../../../Component/TopProjectCom/HeaderBanner";
+import HeaderBanner from "../../../Component/HeaderBanner";
 
 const TextHeader = () => {
     return (

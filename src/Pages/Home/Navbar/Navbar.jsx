@@ -12,13 +12,18 @@ const dark = useContext(ThemContext)
   const navMenu = <>
    
     <li>
-      <Link to='skill' smooth={true} className={dark? 'text-black':'text-white'}>
-        Skill
-      </Link>
+      <NavLink to='/' smooth={true} className={dark? 'text-black':'text-white'}>
+        Home
+      </NavLink>
     </li>
     <li>
-      <Link to='topProject' smooth={true} className={dark? 'text-black':'text-white'}>
-        Top project
+      <NavLink to='/skill'><Link to='skill' smooth={true} className={dark? 'text-black':'text-white'}>
+        Skill
+      </Link></NavLink>
+    </li>
+    <li>
+      <Link to='project' smooth={true} className={dark? 'text-black':'text-white'}>
+        Project
       </Link>
     </li>
     <li>

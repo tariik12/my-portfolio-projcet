@@ -7,11 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 const Education = ({image}) => {
   const {image1,image2,image3} = image
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoPlay:true
     
   };
     return (

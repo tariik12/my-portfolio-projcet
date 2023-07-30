@@ -15,7 +15,7 @@ import TextHeader from "../TextHeader/TextHeader";
 import Contact from "../Contact/Contact";
 import Skills from "../../../Skills/Skills";
 import Project from "../Project/Project";
-import ProjectDetails from "../../../Component/ProjectDetails";
+// import ProjectDetails from "../../../Component/ProjectDetails";
 
 
 const Home = () => {
@@ -25,12 +25,11 @@ const Home = () => {
             <Banner></Banner>
             <Skills/>
              <Project/>
-             <ProjectDetails></ProjectDetails>
+             {/* <ProjectDetails></ProjectDetails> */}
             {/* <TopProject></TopProject> */}
             <Contact></Contact>
 
             {/* TODO */}
-            {/* <Skill></Skill> */}
             {/* <Course></Course> */}
             {/* <Education></Education> */}
             {/* <Language></Language> */}
