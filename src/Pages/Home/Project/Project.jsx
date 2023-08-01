@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../../../Component/Header";
 
 
+
 const Project = () => {
 
     const [projects,setProject] = useState([])
@@ -15,6 +16,7 @@ const Project = () => {
         },[])
     return (
        <div id="project">
+      
         <Header   title={'Projects'}/>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
         {

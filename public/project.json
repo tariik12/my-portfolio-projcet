@@ -1,5 +1,5 @@
 [
-    {   "id":"abc1",
+    {   "id":"Full Stack",
         "projectName": "Summer Language Camp",
         "image1": "https://i.ibb.co/8rC3Kbb/Screenshot-515.png",
         "image2": "https://i.ibb.co/yskkgYJ/Screenshot-516.png",
@@ -13,7 +13,7 @@
 
         
         },
-    {   "id":"abc2",
+    {   "id":"Full Stack",
         "projectName": "Sand Pal Toy",
         "image1": "https://i.ibb.co/hYNpKZR/Screenshot-518.png",
         "image2": "https://i.ibb.co/sQYgXSR/Screenshot-519.png",
@@ -27,7 +27,7 @@
 
         
         },
-    {   "id":"abc3",
+    {   "id":"Front End",
         "projectName": "Food Forever",
         "image1": "https://i.ibb.co/1G1jb7J/Screenshot-521.png",
         "image2": "https://i.ibb.co/P1THh2p/Screenshot-522.png",

@@ -15,12 +15,18 @@ import TextHeader from "../TextHeader/TextHeader";
 import Contact from "../Contact/Contact";
 import Skills from "../../../Skills/Skills";
 import Project from "../Project/Project";
+import { Helmet } from "react-helmet";
 // import ProjectDetails from "../../../Component/ProjectDetails";
 
 
 const Home = () => {
     return (
         <div id="home">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Tarik | Home</title>
+                
+            </Helmet>
             <TextHeader></TextHeader>
             <Banner></Banner>
             <Skills/>

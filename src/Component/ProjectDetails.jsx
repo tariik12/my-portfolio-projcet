@@ -1,42 +1,7 @@
-// import { Link } from "react-router-dom";
-// import Education from "../Pages/Home/Education/Education";
-// import SubHeader from "./SubHeader";
-
-
-// const ProjectDetails = () => {
-
-
-//     const image = {image1,image2,image3}
-//     console.log(clientLink,liveLink,serverLink)
-//     return (
-//         <div className="h-[500px]  z-50  top-0 p-10 overflow-scroll text-white bg-black absolute" style={{ width: '50vw', height: '50vh', top: 0, right: 0}}>
-//                <div className="">
-//                <Education image={image}/>
-//                </div>
-           
-//          <div className="mt-5 md:w-9/12 md:mx-auto ">
-//       
-//    
-//          </div>
-//         
-//       
-//           <h4 className="text-xl font-bold">Technology</h4>
-//           <div className="grid grid-cols-2">
-
-//           {
-//             tec.map(te =><li key={te}>{te}</li>)
-//           }
-//           </div>
-//         </div>
-//     );
-// };
-
-// export default ProjectDetails;
-
-
 import { Link, useLoaderData } from "react-router-dom";
 import Education from "../Pages/Home/Education/Education";
 import SubHeader from "./SubHeader";
+import { Helmet } from "react-helmet";
 
 
 
@@ -48,6 +13,11 @@ const ProjectDetails = () => {
   console.log(image,image1,image2,image3)
   return (
     <div className="mt-10 text-white">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Tarik | {projectName} Details</title>
+                
+            </Helmet>
        <div className="text-center mb-5">
        <SubHeader title={projectName}/>
        </div>
@@ -77,6 +47,9 @@ const ProjectDetails = () => {
            }
            </div>
            <h1 className="">{duration}</h1>
+
+           <Link className="btn" to='/'>Home</Link>
+           <Link className="btn" to='/allProject'>All Project</Link>
     </div>
   );
 };
