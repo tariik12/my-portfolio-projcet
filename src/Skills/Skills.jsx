@@ -86,9 +86,9 @@ const Skills = () => {
           </Marquee>
           <SubHeader title={"Interpersonal Skill"}/>
           <Marquee direction="left" className="text-center  mt-5 p-5">
-          <button className="h-[82px] rounded-xl  w-[82px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Team Worker</p></button>
-          <button className="h-[82px] rounded-xl  w-[82px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Heard Worker</p></button>
-          <button className="h-[82px] rounded-xl  w-[82px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Good communication</p></button>
+          <button className="h-[92px] rounded-xl  w-[122px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Team Worker</p></button>
+          <button className="h-[92px] rounded-xl  w-[122px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Heard Worker</p></button>
+          <button className="h-[92px] rounded-xl  w-[122px] p-2   me-5 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:animate-bounce animate-pulse">   <p>Good communication</p></button>
          
         
          

@@ -3,6 +3,10 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { ThemContext } from "../../../Layout/Main";
+import { FaHome } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { GoProjectSymlink } from "react-icons/go";
+import { BiSolidContact } from "react-icons/bi";
 
 
 
@@ -11,29 +15,29 @@ const Navbar = () => {
 const dark = useContext(ThemContext)
   const navMenu = <>
    
-    <li>
-      <NavLink to='/' smooth={true} className={dark? 'text-black':'text-white'}>
-        Home
-      </NavLink>
-    </li>
-    <li>
-      <NavLink to='/skill'><Link to='skill' smooth={true} className={dark? 'text-black':'text-white'}>
-        Skill
-      </Link></NavLink>
-    </li>
-    <li>
-      <Link to='project' smooth={true} className={dark? 'text-black':'text-white'}>
-        Project
+  
+      <Link to='/' smooth={true} >
+       <FaHome className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Home"/>
       </Link>
-    </li>
-    <li>
-      <Link to='contact' smooth={true} className={dark? 'text-black':'text-white'} >
-        Contact
+    
+  
+      <Link to='skill' smooth={true} >
+       <GiSkills className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Skills" />
       </Link>
-    </li>
+    
+  
+      <Link to='project'  smooth={true} >
+        <GoProjectSymlink className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Projects"/>
+      </Link>
+    
+  
+      <Link to='contact' smooth={true}  >
+        <BiSolidContact className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer hover:border-blue-400':'text-white text-4xl me-5 hover:text-5xl cursor-pointer hover:border-blue-400'} title="Contact"/>
+      </Link>
+    
   </>
   return (
-    <div>
+    <div className="static">
       <div className="navbar" id="navbar">
         <div className="navbar-start">
           <div className="dropdown">
