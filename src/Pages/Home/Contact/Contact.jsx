@@ -26,12 +26,15 @@ const Contact = () => {
 
     }
     return (
-        <div className="pt-10" id="contact">
+        <div className="pt-10" id="contact" >
           <Header title={'Contact with  Me'}/>
           <div className=" ">
   <div className="hero-content flex-col lg:flex-row-reverse gap-10 md:px-20" >
     <div className="text-center lg:text-left w-full">
     <div className=' '>
+      {/* <h3 className='text-white'>Email: tariikul12@gmail.com</h3>
+      <h3 className='text-white'>mobile: +8801708774287</h3>
+      <h3 className='text-white'>Phone: +8801708774287</h3> */}
         <Canvas className="">
             <Stage environment="city" intensity={1}>
 
@@ -41,7 +44,7 @@ const Contact = () => {
         </Canvas>
         </div>
     </div>
-    <div className=" flex-shrink-0 w-full max-w-xl  ">
+    <div className=" flex-shrink-0 w-full max-w-xl  " >
     <form ref={form} onSubmit={handleSubmit}>
       <div className="">
         <div className="form-control">

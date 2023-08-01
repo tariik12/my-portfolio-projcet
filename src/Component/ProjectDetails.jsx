@@ -24,11 +24,12 @@ const ProjectDetails = () => {
                 
             </Helmet>
             <div className=" flex justify-center py-5">
+          
             <Link to='/' smooth={true} >
-       <FaHome className={dark? 'text-black text-4xl me-5   cursor-pointer':'text-white text-4xl me-5  cursor-pointer '} title="Home"/>
+       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Home"/>
       </Link>
       <Link to='/allProject'  smooth={true} >
-        <GoProjectSymlink className={dark? 'text-black text-4xl me-5 hover:text-border-blue-500 cursor-pointer':'text-white text-4xl me-5 hover:text-border-blue-500 cursor-pointer'} title="All Projects"/>
+        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="All Projects"/>
       </Link>
             </div>
           

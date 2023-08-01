@@ -1,5 +1,5 @@
 import Banner from "../Banner/Banner";
-import TextHeader from "../TextHeader/TextHeader";
+// import TextHeader from "../TextHeader/TextHeader";
 
 
 // import Skill from "../Skill/Skill";
@@ -27,8 +27,8 @@ const Home = () => {
                 <title>Tarik | Home</title>
                 
             </Helmet>
-            <TextHeader></TextHeader>
             <Banner></Banner>
+            {/* <TextHeader></TextHeader> */}
             <Skills/>
              <Project/>
              {/* <ProjectDetails></ProjectDetails> */}

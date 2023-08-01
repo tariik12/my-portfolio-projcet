@@ -28,6 +28,3 @@ li a :active {
   @apply font-extrabold  text-xl bg-gradient-to-r from-cyan-500 to-indigo-400;
 }
 
-.text-cyan-500 {
-  
-  color: }

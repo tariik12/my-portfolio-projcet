@@ -15,10 +15,10 @@ const Project = () => {
             .then(data =>setProject(data))
         },[])
     return (
-       <div id="project">
+       <div id="project" className=" pb-20">
       
         <Header   title={'Projects'}/>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-5 mx-2 shadow-xl">
         {
             projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
                <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
@@ -38,7 +38,7 @@ const Project = () => {
             
         </div>
 <div className="text-center">
-<Link to='/allProject' className=" mt-5  border-spacing-3 btn bg-cyan-800">Show All project </Link>
+<Link to='/allProject' className=" mt-5 bg-gradient-to-r from-cyan-500 to-indigo-400  border-spacing-3 btn ">Show All project </Link>
 </div>
        </div>
     );

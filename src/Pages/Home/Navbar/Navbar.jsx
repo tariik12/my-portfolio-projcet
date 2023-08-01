@@ -16,28 +16,28 @@ const dark = useContext(ThemContext)
   const navMenu = <>
    
   
-      <Link to='/' smooth={true} >
-       <FaHome className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Home"/>
+      <Link to='/home' smooth={true} >
+       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Home"/>
       </Link>
     
   
       <Link to='skill' smooth={true} >
-       <GiSkills className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Skills" />
+       <GiSkills className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Skills" />
       </Link>
     
   
       <Link to='project'  smooth={true} >
-        <GoProjectSymlink className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer':'text-white text-4xl me-5 hover:text-5xl cursor-pointer'} title="Projects"/>
+        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Projects"/>
       </Link>
     
   
       <Link to='contact' smooth={true}  >
-        <BiSolidContact className={dark? 'text-black text-4xl me-5 hover:text-5xl cursor-pointer hover:border-blue-400':'text-white text-4xl me-5 hover:text-5xl cursor-pointer hover:border-blue-400'} title="Contact"/>
+        <BiSolidContact className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Contact"/>
       </Link>
     
   </>
   return (
-    <div className="static">
+    <div>
       <div className="navbar" id="navbar">
         <div className="navbar-start">
           <div className="dropdown">
