@@ -9,10 +9,12 @@ import { BiLogoFirebase, BiLogoMongodb } from 'react-icons/bi';
 import { FiFigma } from 'react-icons/fi';
 import { AiFillWindows } from 'react-icons/ai';
 import { SiAxios, SiCanva, SiDaisyui, SiDotenv, SiNetlify, SiPlaycanvas, SiReacthookform, SiReactrouter, SiRedux, SiReduxsaga, SiTypescript, SiVercel } from 'react-icons/si';
-// import { ParallaxProvider } from 'react-scroll-parallax';
+
+
 const Skills = () => {
+
     return (
-        <div  id="skill" className=" bg-no-repeat bg-cover bg-fixed   " style={{backgroundImage:`url("https://img.freepik.com/premium-photo/digital-cyberspace-digital-data-network-connections_24070-1637.jpg?w=360")`}}>
+        <div  id="skill" className=" bg-no-repeat bg-cover bg-fixed   "   >
            <div className="" >
            <Header title={'Skills And Technology'}/>
            </div>

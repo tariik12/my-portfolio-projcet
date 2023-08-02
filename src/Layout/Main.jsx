@@ -6,7 +6,7 @@ import { loadFull } from 'tsparticles';
 import psParticles from '../../public/particles.json';
 import psParticles1 from '../../public/particles1.json';
 import Particles from 'react-tsparticles';
-import { MdOutlineDarkMode } from 'react-icons/md';
+import { CgDarkMode } from 'react-icons/cg';
 import { createContext } from 'react';
 
 
@@ -32,7 +32,7 @@ const Main = () => {
 
       <Navbar />
       <div>
-      <p  className=' ms-[200px] w-5 -mt-[50px]   md:-mt-14 ' onClick={toggleDarkMode}><MdOutlineDarkMode className={dark? 'text-black':'text-white'} style={{fontSize:'40px'}}/></p>
+      <p  className=' ms-[200px] text-7xl -mt-[50px]   md:-mt-20 ' onClick={toggleDarkMode}><CgDarkMode className={dark? 'text-black cursor-pointer md:text-7xl text-3xl':'text-white cursor-pointer md:text-7xl text-3xl'} /></p>
       </div>
       <Outlet />
       <Footer />

@@ -7,9 +7,6 @@ import { FaHome } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { GoProjectSymlink } from "react-icons/go";
 import { BiSolidContact } from "react-icons/bi";
-
-
-
 const Navbar = () => {
   
 const dark = useContext(ThemContext)
@@ -17,27 +14,28 @@ const dark = useContext(ThemContext)
    
   
       <Link to='/home' smooth={true} >
-       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Home"/>
+       <FaHome className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Home"/>
       </Link>
     
   
       <Link to='skill' smooth={true} >
-       <GiSkills className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Skills" />
+       <GiSkills className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Skills" />
       </Link>
     
   
       <Link to='project'  smooth={true} >
-        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Projects"/>
+        <GoProjectSymlink className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Projects"/>
       </Link>
     
   
       <Link to='contact' smooth={true}  >
-        <BiSolidContact className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Contact"/>
+        <BiSolidContact className=" px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Contact"/>
       </Link>
     
   </>
+  
   return (
-    <div>
+    <div className="" >
       <div className="navbar" id="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -51,7 +49,7 @@ const dark = useContext(ThemContext)
           <NavLink className={dark? 'text-black uppercase text-2xl font-bold italic':'text-white uppercase text-2xl font-bold italic'} >Ta<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-xl">ri</span>k</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1" >
             {navMenu}
           </ul>
         </div>

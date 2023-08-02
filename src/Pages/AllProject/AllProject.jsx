@@ -5,57 +5,73 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet";
 import { FaHome } from "react-icons/fa";
-import { GoProjectSymlink } from "react-icons/go";
+// import { GoProjectSymlink } from "react-icons/go";
 // import { ThemContext } from "../../Layout/Main";
 
 
 const AllProject = () => {
   // const dark = useContext(ThemContext)
     const [projects,setProject] = useState([])
+    // const [projects, setprojects] = useState([])
+  const [loading,setLoading] = useState(true)
+
+  const fullStacks = projects.filter(data => data.id === 'Full Stack')
+  const frontEnd = projects.filter(data => data.id === 'Front End' || data.id === 'React.js')
+  const Bootstraps = projects.filter(data => data.id === 'Bootstrap')
+  const HTMLCSS = projects.filter(data => data.id === 'HTML & CSS')
+  const JavaScripts = projects.filter(data => data.id === 'JavaScript')
+
     console.log(projects)
         useEffect(() =>{
+          setLoading(true)
             fetch('https://my-portfolio-server-psi.vercel.app/projects')
             .then(res =>res.json())
-            .then(data =>setProject(data))
+            .then(data =>{
+              setLoading(false)
+              setProject(data)
+            })
         },[])
+
+        if(loading){
+          return  <progress className="progress w-56"></progress>
+          }
     return (
-        <div className="text-white bg-black h-[600px]"  >
+        <div className="text-black font-bold "  >
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Tarik | All Project</title>
                 
             </Helmet>
             <div className=" flex justify-center py-5">
-            <Link to='/' smooth={true} >
-       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Home"/>
+         
+      <Link to='/' smooth={true} >
+       <FaHome className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Home"/>
       </Link>
-      <Link to='/allProject'  smooth={true} >
-        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="All Projects"/>
-      </Link>
+    
             </div>
  <Tabs >
-      <TabList className='text-center border-b-4 my-3'>
+      <TabList className='text-center bg-gradient-to-t from-cyan-500  to-indigo-400 my-3'>
         <Tab >HTML & CSS </Tab>
-        <Tab>Javascript</Tab>
         <Tab>Bootstrap</Tab>
+        <Tab>Javascript</Tab>
         <Tab>All Project</Tab>
-        <Tab>Tailwind</Tab>
-        <Tab>React</Tab>
+        {/* <Tab>Tailwind</Tab> */}
+        <Tab>Front End</Tab>
         <Tab>Full Stack Project</Tab>
         
       </TabList>
       <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mx-2 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mx-2 ">
         {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
+            HTMLCSS.map(project =><div  key={project.id} className=" overflow-hidden bg-opacity-80  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
                <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
+               <div className=" top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
-               <p className="   text-xl text-center font-bold">{project.projectName}</p>
-               <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
+               <p className="text-xl w-full text-center font-bold">{project.projectName}</p>
+               <p className=" text-center my-3 border-b-2  w-full pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-white">{project.tec}</p>
+               <p className="inline text-black font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
@@ -67,17 +83,17 @@ const AllProject = () => {
 
       </TabPanel>
       <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 ">
         {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
-               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
+            Bootstraps.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:p-2 rounded-sm group " style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
+               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full rounded-sm" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
+               <div className="   opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
                <p className="   text-xl text-center font-bold">{project.projectName}</p>
                <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-white">{project.tec}</p>
+               <p className="inline text-black font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
@@ -89,17 +105,17 @@ const AllProject = () => {
 
       </TabPanel>
       <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 ">
         {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
+            JavaScripts.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
                <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
+               <div className="  opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
                <p className="   text-xl text-center font-bold">{project.projectName}</p>
                <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-white">{project.tec}</p>
+               <p className="inline text-black font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
@@ -111,17 +127,40 @@ const AllProject = () => {
 
       </TabPanel>
       <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 ">
         {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
+            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
                <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
+               <div className="  opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
                <p className="   text-xl text-center font-bold">{project.projectName}</p>
                <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-white">{project.tec}</p>
+               <p className="inline text-black font-bold">{project.tec}</p>
+               </Marquee>
+               </div>
+               </div>
+                </Link>
+            </div>)
+        }
+            
+        </div>
+
+      </TabPanel>
+      
+      <TabPanel>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 ">
+        {
+            frontEnd.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
+               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
+               <div>
+               <div className="  opacity-100 group-hover:opacity-0  text-cyan-300  ">
+                
+               <p className="   text-xl text-center font-bold">{project.projectName}</p>
+               <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
+               <Marquee>
+               <p className="inline text-black font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
@@ -133,9 +172,9 @@ const AllProject = () => {
 
       </TabPanel>
       <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 ">
         {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
+            fullStacks.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group" style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
                <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
                <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
@@ -143,51 +182,7 @@ const AllProject = () => {
                <p className="   text-xl text-center font-bold">{project.projectName}</p>
                <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-white">{project.tec}</p>
-               </Marquee>
-               </div>
-               </div>
-                </Link>
-            </div>)
-        }
-            
-        </div>
-
-      </TabPanel>
-      <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
-        {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
-               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
-               <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
-                
-               <p className="   text-xl text-center font-bold">{project.projectName}</p>
-               <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
-               <Marquee>
-               <p className="inline text-white">{project.tec}</p>
-               </Marquee>
-               </div>
-               </div>
-                </Link>
-            </div>)
-        }
-            
-        </div>
-
-      </TabPanel>
-      <TabPanel>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 shadow-xl">
-        {
-            projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group " style={{backgroundImage:`url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")`}}>
-               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
-               <div>
-               <div className="absolute top-3  opacity-100 group-hover:opacity-0  text-cyan-300  ">
-                
-               <p className="   text-xl text-center font-bold">{project.projectName}</p>
-               <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
-               <Marquee>
-               <p className="inline text-white">{project.tec}</p>
+               <p className="inline text-black font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
