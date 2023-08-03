@@ -17,6 +17,7 @@ const AllProject = () => {
 
   const [searchText, setSearchText] = useState('')
 
+  
     console.log(projects)
         useEffect(() =>{
           setLoading(true)
@@ -27,8 +28,10 @@ const AllProject = () => {
               setProject(data)
             })
         },[])
-
         const handleSearch =() =>{
+          if(searchText === null || searchText === Number || searchText === ""){
+            return  alert(' please search valid keyword')
+            }
           setLoading(true)
           fetch(`https://my-portfolio-server-psi.vercel.app/projectsSearch/${searchText}`)
           .then(res =>res.json())
@@ -56,9 +59,9 @@ const AllProject = () => {
     
             </div>
 
-            <div className="form-control md:w-1/3  absolute z-50  left-[400px] mx-10 bg-black rounded-2xl">
+            <div className="form-control md:w-1/3  absolute z-50  md:left-[400px] mx-10 bg-black rounded-2xl">
                     <div className="">
-                        <input onChange={(event)=>setSearchText(event.target.value)} type="text" placeholder="Search by Technology such as react or javascript" className="input bg-transparent border-cyan-100 w-full pr-16 text-cyan-100"  required/>
+                        <input onChange={(event)=>setSearchText(event.target.value)} type="text" placeholder="Search by Technology such as react or javascript" className="input bg-transparent border-cyan-100 w-full pr-16 text-cyan-100" />
                         <button onClick={handleSearch} className="  bg-transparent hover:none absolute top-2 rounded-2xl right-0 rounded-l-none"><FaSistrix className="w-16 text-cyan-100 h-8"/></button>
                     </div>
                 </div>

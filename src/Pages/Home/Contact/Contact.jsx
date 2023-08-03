@@ -76,21 +76,21 @@ const Contact = () => {
       <div className="">
         <div className="form-control">
           <label className="label">
-            <span  className={dark? 'label-text text-black':'text-white label-text'} >Name</span>
+            <span  className={dark? 'label-text text-black border-in':'text-white label-text'} >Name</span>
           </label>
-          <input type="text" placeholder="name" name='name'className='input'   required/>
+          <input type="text" placeholder="name" name='name'className='input border-indigo-400'   required/>
         </div>
         <div className="form-control">
           <label className="label">
             <span className={dark? 'label-text text-black':'text-white label-text'}>Email</span>
           </label>
-          <input type="email" placeholder="email" name='email' className='input' required />
+          <input type="email" placeholder="email" name='email' className='input border-indigo-400' required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className={dark? 'label-text text-black':'text-white label-text'}>Text</span>
           </label>
-          <textarea type="text"  placeholder="Wright your message" name='message'  className='input ' required/>
+          <textarea type="text"  placeholder="Wright your message" name='message'  className='input border-indigo-400 ' required/>
         </div>
       
         <div className="form-control mt-6">
