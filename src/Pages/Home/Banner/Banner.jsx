@@ -1,8 +1,8 @@
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-// import resume from "../../../../public/resume.json";
+// import resume from "../../../../public/resume.jso";
 // import Lottie from "lottie-react";
-import myPdf from "../../../../public/resume.pdf";
+import myPdf from "../../../../public/resumeOfTariklul.pdf";
 import { AiFillGithub, AiFillLinkedin, } from 'react-icons/ai';
 import { FiFacebook } from 'react-icons/fi';
 import { Link } from "react-router-dom";
