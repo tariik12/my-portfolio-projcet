@@ -57,7 +57,7 @@ const Project = () => {
          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 py-5 mx-2 ">
         {
             projects.slice(0,3).map(project =><div  key={project.id} className=" overflow-hidden border-cyan-300 pt-20 hover:pt-0 group  rounded-xl hover:shadow-indigo-600 hover:shadow-xl"  style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
-               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
+               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-[200px]  bg-blue-400 transition-all group-hover:w-full group-hover:h-full " src={project.image1} alt=""  title="click here for showing details"/>
                <div>
                <div className="  opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
@@ -74,7 +74,7 @@ const Project = () => {
             
         </div>
 <div className="text-center">
-<Link to='/allProject' className=" mt-5 bg-gradient-to-r from-cyan-500 to-indigo-400  border-spacing-3 btn ">Show All project </Link>
+<Link to='/allProject' className=" mt-5 bg-gradient-to-r from-cyan-500 to-indigo-400  border-spacing-3 btn  hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white">Show All project </Link>
 </div>
        </div>
     );

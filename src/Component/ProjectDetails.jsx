@@ -26,10 +26,10 @@ const ProjectDetails = () => {
             <div className=" flex justify-center py-5">
           
             <Link to='/' smooth={true} >
-       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="Home"/>
+       <FaHome className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="Home"/>
       </Link>
       <Link to='/allProject'  smooth={true} >
-        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8" title="All Projects"/>
+        <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="All Projects"/>
       </Link>
             </div>
           
@@ -43,9 +43,12 @@ const ProjectDetails = () => {
      
      
      <div className="text-center mt-10">
-     <Link to={clientLink} className="btn btn-sm md:btn-md mb-3 text-xl me-2 bg-gradient-to-t from-cyan-500  to-indigo-400"><button >Client Git</button></Link>
-      <Link to={liveLink} className="btn btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500 me-2 mb-3 to-indigo-400"><button>LiveLink</button></Link>
-      <Link to={serverLink} className="btn  btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500  to-indigo-400"><button><button>server Git</button></button></Link>
+     <Link to={clientLink} className="btn btn-sm md:btn-md mb-3 text-xl me-2 bg-gradient-to-t from-cyan-500  to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white"><button >Client Git</button></Link>
+      <Link to={liveLink} className="btn btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500 me-2 mb-3 to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white"><button>LiveLink</button></Link>
+    {
+      (serverLink === '' ?<></>:<><Link to={serverLink} className="btn  btn-sm md:btn-md text-xl  bg-gradient-to-t from-cyan-500  to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white"><button><button>server Git</button></button></Link></>)
+    }
+      
      </div>
 
       <div className="ps-10">
@@ -60,7 +63,7 @@ const ProjectDetails = () => {
              tec.map(te =><li key={te}>{te}</li>)
            }
            </div>
-           <h1 className="">{duration}</h1>
+           <h1 className=""> <span className="text-xl font-bold mt-5">Duration:</span> {duration}</h1>
           </div>
           
 

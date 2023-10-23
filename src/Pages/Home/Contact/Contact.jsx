@@ -35,36 +35,36 @@ const Contact = () => {
   <div className="hero-content flex-col lg:flex-row-reverse gap-10 md:px-20"  >
  
         <div className='flex flex-col items-center gap-4'>
-        <button className="rounded-full" onClick={()=>window.my_modal_5.showModal()}><ImWhatsapp className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="WhatsAppNumber" /></button>
+        <button className="rounded-full" onClick={()=>window.my_modal_5.showModal()}><ImWhatsapp className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="WhatsAppNumber" /></button>
 <dialog id="my_modal_5" className="modal modal-bottom md:modal-middle">
   <form method="dialog" className="modal-box">
     <h3 className="font-thin text-center text-2xl ">WhatsApp Number</h3>
     <p className="py-4 text-center">+8801708774287</p>
     <div className="text-center">
       {/* if there is a button in form, it will close the modal */}
-      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl " title="close" /></button>
+      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="close" /></button>
     </div>
   </form>
 </dialog>
-        <button className="rounded-full" onClick={()=>window.my_modal_6.showModal()}><MdOutlineContactPhone className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="WhatsAppNumber" /></button>
+        <button className="rounded-full" onClick={()=>window.my_modal_6.showModal()}><MdOutlineContactPhone className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="WhatsAppNumber" /></button>
 <dialog id="my_modal_6" className="modal modal-bottom md:modal-middle">
   <form method="dialog" className="modal-box">
     <h3 className="font-thin text-center text-2xl ">Mobile Number</h3>
     <p className="py-2 text-center">+8801708774287</p>
     <p className="py-2 text-center">+8801611826146</p>
     <div className="text-center">
-      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl " title="close" /></button>
+      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="close" /></button>
     </div>
   </form>
 </dialog>
-        <button className="rounded-full" onClick={()=>window.my_modal_7.showModal()}><MdAttachEmail className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="WhatsAppNumber" /></button>
+        <button className="rounded-full" onClick={()=>window.my_modal_7.showModal()}><MdAttachEmail className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="WhatsAppNumber" /></button>
 <dialog id="my_modal_7" className="modal modal-bottom md:modal-middle">
   <form method="dialog" className="modal-box">
     <h3 className="font-thin text-center text-2xl ">Email</h3>
     <p className="py-4 text-center">tariikul12@gmail.com</p>
     <div className="text-center">
       {/* if there is a button in form, it will close the modal */}
-      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl " title="close" /></button>
+      <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="close" /></button>
     </div>
   </form>
 </dialog>
@@ -94,7 +94,7 @@ const Contact = () => {
         </div>
       
         <div className="form-control mt-6">
-          <button type='submit' className="btn bg-gradient-to-t from-cyan-500  to-indigo-400">Send</button>
+          <button type='submit' className="btn bg-gradient-to-t from-cyan-500  to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white">Send</button>
         </div>
       </div>
     </form>

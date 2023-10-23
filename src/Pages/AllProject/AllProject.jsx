@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 
 import 'react-tabs/style/react-tabs.css';
 import { Link } from "react-router-dom";
@@ -6,11 +6,11 @@ import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet";
 import { FaHome, FaSistrix } from "react-icons/fa";
 // import { GoProjectSymlink } from "react-icons/go";
-// import { ThemContext } from "../../Layout/Main";
+import { ThemContext } from "../../Layout/Main";
 
 
 const AllProject = () => {
-  // const dark = useContext(ThemContext)
+  const dark = useContext(ThemContext)
     const [projects,setProject] = useState([])
     // const [projects, setprojects] = useState([])
   const [loading,setLoading] = useState(true)
@@ -54,7 +54,7 @@ const AllProject = () => {
             <div className=" flex justify-center py-5">
          
       <Link to='/' smooth={true} >
-       <FaHome className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" title="Home"/>
+       <FaHome className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="Home"/>
       </Link>
     
             </div>
@@ -69,14 +69,14 @@ const AllProject = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 mt-32">
         {
             projects.map(project =><div  key={project.id} className=" overflow-hidden  pt-20 hover:pt-0 group rounded-2xl" style={{backgroundImage:`url("https://t3.ftcdn.net/jpg/05/12/57/88/360_F_512578835_BdfMwRzEOA0YEih1fn9MZ7EJSNXfsfLM.jpg")`}}>
-               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-1/2  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
+               <Link to={`/projectDetails/${project._id}`} className="relative"> <img  className="  flex opacity-10 mx-auto   hover:opacity-100 h-[200px]  bg-blue-400 transition-all group-hover:w-full group-hover:h-full" src={project.image1} alt=""  title="click here for showing details"/>
                <div>
                <div className="  opacity-100 group-hover:opacity-0  text-cyan-300  ">
                 
                <p className="   text-xl text-center font-bold">{project.projectName}</p>
                <p className=" text-center my-3 border-b-2 pb-2">Technology</p>
                <Marquee>
-               <p className="inline text-black font-bold">{project.tec}</p>
+               <p className="inline text-white font-bold">{project.tec}</p>
                </Marquee>
                </div>
                </div>
@@ -84,7 +84,7 @@ const AllProject = () => {
             </div>)
         }
             
-         <h1 className="text-center text-4xl animate-pulse mt-5">PortFolio Projects Updating</h1>
+         <h1 className={dark? 'text-black bg-white text-center text-4xl animate-pulse mt-5':'text-white  text-center text-4xl animate-pulse mt-5' } >PortFolio Projects Updating....</h1>
        </div>
        </div>
     );

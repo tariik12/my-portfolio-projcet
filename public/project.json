@@ -10,8 +10,18 @@
         "serverLink":"https://github.com/tariik12/summer-camp-server",
         "tec":["React.js "," React Router "," React Awesome Components "," Tailwind CSS "," Daisyui "," Firebase Authentication "," MongoDB "," Express.js "," React Hook Form "," React Tap "," AOS "," Axios "," TanStack react query "," Animation Reve l React Toastify."],
         "duration":"10 Days"
-
-        
+        },
+        {   "id":"Full Stack",
+        "projectName": "BD Crafts",
+        "image1": "https://i.ibb.co/7Q7jzqV/screencapture-bd-crafts-client-vercel-app-profile-2023-10-23-09-08-48.png",
+        "image2": "https://i.ibb.co/S7dRNB4/screencapture-bd-crafts-client-vercel-app-shop-all-Product-2023-10-23-09-08-12.png",
+        "image3": "https://i.ibb.co/6P0Hx1g/screencapture-bd-crafts-client-vercel-app-2023-10-23-09-05-55.png",
+        "description":["Im Team Leader of this project and I have contributed front end and server site to the Project layout, Authentication, Stroy section, Payment banking, popular products, and searching data.","For Payment, I have Implemented sslcommerz banking system.","I have implemented a slick slider for Create Story and Popular Products. Users can post stories."],
+        "clientLink":"https://github.com/tariik12/bd-crafts-client",
+        "liveLink":"https://bd-craft-client.web.app/",
+        "serverLink":"https://github.com/Rayhan108/bdCrafts-server",
+        "tec":["React.js "," React Router "," React Awesome Components "," Tailwind CSS "," Daisyui "," Firebase Authentication "," MongoDB "," Express.js "," React Hook Form "," React Tap "," AOS "," Axios "," TanStack react query "," React Toastify."],
+        "duration":"10 Days"
         },
     {   "id":"Full Stack",
         "projectName": "Sand Pal Toy",
@@ -27,6 +37,18 @@
 
         
         },
+        {   "id":"React.js",
+        "projectName": "Fliqa-India",
+        "image1": "https://i.ibb.co/cxW8PHb/Screenshot-631.png",
+        "image2": "https://i.ibb.co/grLGxcG/Screenshot-635.png",
+        "image3": "https://i.ibb.co/RPcvmb1/Screenshot-632.png",
+        "description":["The home page adds 8 interesting sections and a dynamic autoplay Banner slider.","For user interaction Added AOS animation and React Tab to the website.","And I will Implement a dynamic route and server system and will add more features add such as Firebase authentication. "],
+        "clientLink":"https://github.com/tariik12/fliqa-india",
+        "liveLink":"https://ubiquitous-syrniki-2182bd.netlify.app/",
+        "serverLink":"",
+        "tec":["HTML"," React Marque"," Tailwind"," Toastify"," ES6"," React.js"," Figma"," Netlify"," React Router"],
+        "duration":"3 Days"
+        },
     {   "id":"Front End",
         "projectName": "Food Forever",
         "image1": "https://i.ibb.co/Yt9k7jv/Screenshot-622.png",
@@ -36,7 +58,7 @@
         "clientLink":"https://github.com/tariik12/food-forever-client",
         "liveLink":"https://italian-recipe-assignment10.web.app/",
         "serverLink":"https://github.com/tariik12/food-forever-server-site",
-        "tec":["React.js","React Router","React Awesome","Tailwind CSS","Firebase Authentication","MongoDB Express.js","React Marque","Lottie Animation "],
+        "tec":["React.js"," React Router"," React Awesome"," Tailwind CSS"," Firebase Authentication"," MongoDB Express.js"," React Marque"," Lottie Animation "],
         "duration":"5 Days" 
         },
         {   "id":"React.js",
@@ -48,21 +70,10 @@
             "clientLink":"https://github.com/tariik12/glass-door",
             "liveLink":"https://stellular-selkie-b2242a.netlify.app/",
             "serverLink":"",
-            "tec":["HTML","CSS","Bootstrap","Toastify","ES6","React.js","Figma","Netlify"],
+            "tec":["HTML"," CSS"," Bootstrap"," Toastify"," ES6"," React.js"," Figma"," Netlify"],
             "duration":"Mar/14/2023 - Mar/17/2023"
             },
-        {   "id":"React.js",
-            "projectName": "Fliqa-India",
-            "image1": "https://i.ibb.co/cxW8PHb/Screenshot-631.png",
-            "image2": "https://i.ibb.co/grLGxcG/Screenshot-635.png",
-            "image3": "https://i.ibb.co/RPcvmb1/Screenshot-632.png",
-            "description":["The home page adds 8 interesting sections and a dynamic autoplay Banner slider.","For user interaction Added AOS animation and React Tab to the website.","And I will Implement a dynamic route and server system and will add more features add such as Firebase authentication. "],
-            "clientLink":"https://github.com/tariik12/fliqa-india",
-            "liveLink":"https://ubiquitous-syrniki-2182bd.netlify.app/",
-            "serverLink":"",
-            "tec":["HTML","React Marque","Tailwind","Toastify","ES6","React.js","Figma","Netlify","React Router",""],
-            "duration":"Running"
-            },
+       
         {   "id":"Bootstrap",
             "projectName": "BiduBash",
             "image1": "https://i.ibb.co/fxxbyg3/Screenshot-636.png ",
@@ -72,8 +83,8 @@
             "clientLink":"https://github.com/tariik12/BiduBash_scss_implent",
             "liveLink":"https://relaxed-biscochitos-8c9571.netlify.app/",
             "serverLink":"",
-            "tec":["HTML","React Marque","Bootstrap","SCSS","ES6","React.js","Figma","Netlify","React Router",""],
-            "duration":"Running"
+            "tec":["HTML"," React Marque"," Bootstrap"," SCSS"," ES6"," React.js"," Figma"," Netlify"," React Router",""],
+            "duration":"1 Days"
             },
  
     {   "id":"HTML & CSS",
@@ -85,7 +96,7 @@
         "clientLink":"https://github.com/tariik12/first-assignment",
         "liveLink":"https://tariik12.github.io/first-assignment/",
         "serverLink":"",
-        "tec":["HTML","CSS"],
+        "tec":["HTML"," CSS"],
         "duration":"Jan/6/2023 - Jan/7/2023"
         },
     {   "id":"HTML & CSS",
@@ -97,7 +108,7 @@
         "clientLink":"https://github.com/tariik12/second-assignment",
         "liveLink":"https://tariik12.github.io/second-assignment/",
         "serverLink":"",
-        "tec":["HTML","CSS"],
+        "tec":["HTML"," CSS"],
         "duration":"Jan/14/2023 - Jan/15/2023"
         },
     {   "id":"Bootstrap",
@@ -109,7 +120,7 @@
         "clientLink":"https://github.com/tariik12/justice-bootstrap-projcet",
         "liveLink":"https://incandescent-cajeta-c52399.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Netlify"],
         "duration":"Jan/24/2023 - Jan/25/2023"
         },
     {   "id":"JavaScript",
@@ -121,7 +132,7 @@
         "clientLink":"https://github.com/tariik12/geomatry5",
         "liveLink":"https://creative-puppy-12b770.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Javascript","Figma","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Javascript"," Figma"," Netlify"],
         "duration":"Jan/14/2023 - Jan/15/2023"
         },
     {   "id":"JavaScript",
@@ -133,7 +144,7 @@
         "clientLink":"https://github.com/tariik12/universe-hub",
         "liveLink":"https://kaleidoscopic-creponne-e7e4fe.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Javascript","ES6","Figma","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Javascript"," ES6"," Figma"," Netlify"],
         "duration":"Mar/4/2023 - Mar/6/2023"
         },
     {   "id":"JavaScript",
@@ -145,7 +156,7 @@
         "clientLink":"https://github.com/tariik12/b7-quize-hero-devtool",
         "liveLink":"https://thunderous-pithivier-bf92e6.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Javascript","ES6","Figma","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Javascript"," ES6"," Figma"," Netlify"],
         "duration":"Mar/4/2023 - Mar/6/2023"
         },
     {   "id":"React.js",
@@ -157,7 +168,7 @@
         "clientLink":"https://github.com/tariik12/programing-knowedge",
         "liveLink":"https://effervescent-entremet-124f05.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Toastify","ES6","React.js","Figma","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Toastify"," ES6"," React.js"," Figma"," Netlify"],
         "duration":"Mar/4/2023 - Mar/6/2023"
         },
     {   "id":"React.js",
@@ -169,7 +180,7 @@
         "clientLink":"https://github.com/tariik12/glass-door",
         "liveLink":"https://stellular-selkie-b2242a.netlify.app/",
         "serverLink":"",
-        "tec":["HTML","CSS","Bootstrap","Toastify","ES6","React.js","Figma","Netlify"],
+        "tec":["HTML"," CSS"," Bootstrap"," Toastify"," ES6"," React.js"," Figma"," Netlify"],
         "duration":"Mar/4/2023 - Mar/6/2023"
         }
 ]

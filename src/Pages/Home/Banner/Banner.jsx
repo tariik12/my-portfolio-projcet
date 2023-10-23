@@ -2,7 +2,7 @@ import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 // import resume from "../../../../public/resume.jso";
 // import Lottie from "lottie-react";
-import myPdf from "../../../../public/resumeOfTariklul.pdf";
+import myPdf from "../../../../public/resumeOfMdTarikulIslam.pdf";
 import { AiFillGithub, AiFillLinkedin, } from 'react-icons/ai';
 import { FiFacebook } from 'react-icons/fi';
 import { Link } from "react-router-dom";
@@ -64,9 +64,9 @@ const Banner = () => {
                 <div className=' mx-auto mt-10  flex justify-center gap-5'>
 
                     <button className="btn text-xs md:font-bold md:text-xl bg-gradient-to-t from-cyan-500 
-                                  to-indigo-400" onClick={handleDownload}>Resume PDF</button>
+                                  to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" onClick={handleDownload}>Resume PDF</button>
                                   {/* Open the modal using ID.showModal() method */}
-<button className="btn text-xs md:font-bold md:text-xl bg-gradient-to-r from-cyan-500 to-indigo-400" onClick={()=>window.my_modal_10.showModal()}>About Me</button>
+<button className="btn text-xs md:font-bold md:text-xl bg-gradient-to-r from-cyan-500 to-indigo-400 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" onClick={()=>window.my_modal_10.showModal()}>About Me</button>
 <dialog id="my_modal_10" className="modal modal-middle ">
   <form method="dialog" className="modal-box">
     <div >
@@ -76,15 +76,15 @@ const Banner = () => {
     <p className="md:py-4 py-2">I am a hard worker and like to build my programming career by learning new topics and I always like fixed-time maintenance. </p>
     </div>
     <div className="flex justify-center mt-5">
-    <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl " title="close" /></button>
+    <button className="rounded-full" ><CgCloseO className="   rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="close" /></button>
     </div>
   </form>
 </dialog>
                 </div>
                 <div className="flex justify-center mt-7">
-                <Link to='https://github.com/tariik12' ><AiFillGithub className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8"/></Link >
-                <Link to='https://www.facebook.com/tariikul12' ><FiFacebook className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8" /></Link >
-                <Link to='https://www.linkedin.com/in/md-tarikul-islam-8113b9282/' ><AiFillLinkedin className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8"/></ Link >
+                <Link to='https://github.com/tariik12' ><AiFillGithub className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white"/></Link >
+                <Link to='https://www.facebook.com/tariikul12' ><FiFacebook className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" /></Link >
+                <Link to='https://www.linkedin.com/in/md-tarikul-islam-8113b9282/' ><AiFillLinkedin className="  px-5 rounded-full bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-7xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white"/></ Link >
             </div>
             </div>
 
