@@ -20,7 +20,7 @@ const Education = ({image}) => {
           {/* TODO */}
             {/* <Header title={'Education'}/> */}
             <div>
-        <Slider {...settings} className="bg-black text-white text-4xl">
+        <Slider {...settings} className=" text-white text-4xl">
           <div >
             <img src={image1} alt="" />
           </div>

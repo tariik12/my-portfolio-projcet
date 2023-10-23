@@ -10,6 +10,8 @@ import { GoProjectSymlink } from "react-icons/go";
 
 
 const ProjectDetails = () => {
+
+  
   const dark = useContext(ThemContext)
   const projectData = useLoaderData();
   const {description,duration,image1,image2,image3,liveLink,projectName,serverLink,tec,clientLink} =projectData
@@ -32,7 +34,9 @@ const ProjectDetails = () => {
         <GoProjectSymlink className=" p-2 rounded-xl bg-gradient-to-t from-cyan-500  to-indigo-400   cursor-pointer text-4xl me-8 hover:bg-gradient-to-t hover:from-cyan-700  hover:to-indigo-700 text-white" title="All Projects"/>
       </Link>
             </div>
-          
+          {/* 
+
+ */}
        <div className="text-center mb-5">
        <SubHeader title={projectName}/>
        </div>

@@ -28,3 +28,38 @@ li a :active {
   @apply font-extrabold  text-xl bg-gradient-to-r from-cyan-500 to-indigo-400;
 }
 
+
+.slick-arrow{
+  background: rgb(159, 37, 247) !important;
+  border-radius: 100%;
+  position: absolute !important;
+}
+
+
+.slick-prev{
+  background: rgb(159, 37, 247) !important;
+  position: absolute !important;
+  z-index: 10;
+  margin-left: 30px !important;
+  height: 50px !important;
+  width: 50px !important;  
+}
+.slick-next{
+  background: rgb(159, 37, 247) !important;
+  position: absolute !important;
+  z-index: 10;
+  margin-right: 30px !important;
+ height: 50px !important;
+ width: 50px !important;  
+ 
+}
+slick-next.hover::after {
+  background: rgb(118, 55, 163) !important;
+  position: absolute !important;
+  z-index: 10;
+  margin-right: 30px !important;
+ height: 50px !important;
+ width: 50px !important;  
+ 
+}
+
